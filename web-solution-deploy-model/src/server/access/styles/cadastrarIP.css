@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Roboto&display=swap');
+
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+    background-color: #cde9d5;
+    height: 100%;
+    width: 100%;
+}
+
+body h1 {
+    font-family: Play, sans-serif;
+}
+
+body button {
+    margin-top: 1vmax;
+    background-color: aqua;
+    border-radius: 2vh;
+    border-width: 0px;
+    height: 3vmax;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vmax;
+    margin-left: 2vmax;
+    margin-bottom: 1vmax;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    text-align: center;
+    vertical-align: center;
+    background: rgb(0,255,205);
+    background: linear-gradient(90deg, rgb(168, 255, 238) 0%, rgb(186, 255, 255) 30%, rgb(198, 212, 252) 100%);
+    
+}
+
+table td {
+    border: 1px black solid;
+    padding: .8vmax;
+    width: 2vw;
+    font-family: Roboto, sans-serif;
+}
+
+.firstLine{
+    color: blue;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    background: rgb(0, 199, 159);
+    background: linear-gradient(90deg, rgb(10, 198, 161) 0%, rrgb(22, 196, 196)30%, rgb(99, 138, 247) 100%);
+}
+
+#cadastrarIPForm, #cadastrarSbcForm {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 2vmax;
+    padding: 2vmax;
+    width: 35vw;
+    background: rgb(0,255,205);
+    background: linear-gradient(90deg, rgb(168, 255, 238) 0%, rgb(186, 255, 255) 30%, rgb(198, 212, 252) 100%);
+
+}
+
+
+#cadastrarIPForm input, 
+#cadastrarIPForm label, 
+#cadastrarIPForm select {
+    margin-top: .3vmax;
+    width: 30vmax;
+    height: 2vmax;
+    align-items: center;
+}
+
+#cadastrarIPForm button {
+    margin-top: .8vmax;
+    width: 15vmax;
+    height: 2vmax;
+    align-items: center;
+    background-color: coral;
+}
+
+#cadastrarSbcForm input, 
+#cadastrarSbcForm label, 
+#cadastrarSbcForm select {
+    margin-top: .3vmax;
+    width: 30vmax;
+    height: 2vmax;
+    align-items: center;
+}
+
+#cadastrarSbcForm button {
+    margin-top: .8vmax;
+    width: 15vmax;
+    height: 2vmax;
+    align-items: center;
+    background-color: coral;
+}
+
+
+#bottomBtns{
+    display: flex;
+    flex-direction: row;
+}

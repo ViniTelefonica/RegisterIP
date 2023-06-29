@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar novo IP</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icon.ico">
+    <link rel="stylesheet" href="../styles/cadastrarIP.css">
+</head>
+<script src="../scripts/SBCgetter.js"></script>
+<body>
+    <h1>Cadastrar novo IP</h1>
+    <p>Para cadastrar um novo IP, preencha todos os campos abaixo. Se alguma informação não aparecer, tente recarregar a página.</p>
+    <form id="cadastrarIPForm" autocomplete="off">
+        <label for="inputSbc">SBC:</label>
+        <select name="inputSbc" id="inputSbc" required>
+        </select>
+        <label for="inputCanaisCap">Capacidade de Canais:</label>
+        <select name="inputCanaisCap" id="inputCanaisCap"></select>
+        <label for="inputCapsCap">Capacidade de Caps:</label>
+        <select name="inputCapsCap" id="inputCapsCap"></select>
+        <label for="inputIp">IP E PROTOCOLO:</label>
+        <select name="inputIp" id="inputIp" required>
+            <option value="">Selecione um IP</option>
+            <optgroup id="inputIpOpt" label="IPs válidos para o SBC">
+            </optgroup>
+        </select>
+        <select name="inputSipRtp" id="inputSipRtp">
+        </select>
+        <label for="inputMask">Máscara de rede:</label>
+        <select name="inputMask" id="inputMask" required>
+        </select>
+        <label for="inputVrf">VRF:</label>
+        <select name="inputVrf" id="inputVrf">
+        </select>
+        <label for="inputVlan">Vlan:</label>
+        <select name="inputVlan" id="inputVlan">
+        </select>
+        <label for="inputOperator">Operadora:</label>
+        <select name="inputOperator" id="inputOperator" required></select>
+        <label for="inputOwner">Responsável</label>
+        <select name="inputOwner" id="inputOwner" required>
+        </select>
+        <label for="inputDate">Data:</label>
+        <input type="date" name="inputDate" id="inputDate" required>
+        <label for="inputRouteType">Tipo de rota:</label>
+        <input type="text" name="inputRouteType" id="inputRouteType" required>
+        <label for="inputVolume">Canais:</label>
+        <input type="number" name="inputVolume" id="inputVolume" min="1" required>
+        <label for="inputCaps">Caps:</label>
+        <input type="number" name="inputCaps" id="inputCaps" min="1" required>
+        <label for="inputSide">Lado:</label>
+        <select name="inputSide" id="inputSide">
+            <option value="CORE">CORE</option>
+            <option value="ACESSO">ACESSO</option>
+            <option value="GERÊNCIA">GERÊNCIA</option>
+        </select>
+        <button type="submit">Cadastrar IP</button>
+    </form>
+    <div id="bottomBtns">
+        <button id="buttonBaixarPlanilha">Baixar Planilha CSV</button>
+        <button id="buttonVerifyVolumeCaps" onclick="window.open('./volumeAndCapsInfo.html', 'popup', 'width=450,height=300')">Verificar Volume e Caps totais</button>
+    </div>
+</body>
+<script>
+    const select = document.getElementById('inputMask');
+    for(var i = 8;  i < 33; i++){
+        const newValue = document.createElement('option');
+        newValue.value = i;
+        newValue.innerHTML = i;
+        newValue.textContent = i;
+        select.appendChild(newValue);
+    };
+</script>
+<script src="../scripts/IPgetter.js"></script>
+<script src="../scripts/calcularMascara.js"></script>
+<script src="../scripts/calcularNetAdd.js"></script>
+<script src="../scripts/obterHostsValidos.js"></script>
+<script src="../scripts/enviarCadastro.js"></script>
+<script src="../scripts/baixarPlanilha.js"></script>
+<script src="../scripts/getVrfs.js"></script>
+<script src="../scripts/getOperadoras.js"></script>
+<script src="../scripts/getResponsaveis.js"></script>
+<script src="../scripts/getProtocol.js"></script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Operadora</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icon.ico">
+    <link rel="stylesheet" href="../../styles/cadastrarIP.css">
+</head>
+<body>
+    <h1>Cadastrar nova Operadora</h1>
+    <p>Para cadastrar uma nova operadora, preencha todos os campos abaixo. Se alguma informação não aparecer, tente recarregar a página.</p>
+    <form id="cadastrarSbcForm" autocomplete="off">
+        <label for="inputOperator">Nome da operadora:</label>
+        <input type="text" name="inputOperator" id="inputOperator" required>
+        <label for="inputCn">CN:</label>
+        <input type="number" name="inputCn" id="inputCn">
+        <button type="submit">Cadastrar Operadora</button>
+    </form>
+</body>
+<script src="../register-admin-scripts/operatorRegister.js"></script>
+</html>

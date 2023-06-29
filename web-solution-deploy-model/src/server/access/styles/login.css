@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Roboto&display=swap');
+
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    background-color: #cde9d5;
+    height: 100%;
+    width: 100%;
+}
+
+body h1 {
+    font-family: Play, sans-serif;
+}
+
+body h2 {
+    font-family: Play, sans-serif;
+    font-size: 2vmax;
+}
+
+body button {
+    margin-top: 1vmax;
+    background-color: aqua;
+    border-radius: 2vh;
+    border-width: 0px;
+    height: 3vmax;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginForm {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 2vmax;
+    padding: 2vmax;
+    width: 35vw;
+    background: rgb(0,255,205);
+    background: linear-gradient(90deg, rgb(168, 255, 238) 0%, rgb(186, 255, 255) 30%, rgb(198, 212, 252) 100%);
+
+}
+
+#loginForm input, 
+#loginForm label, 
+#loginForm select {
+    margin-top: .3vmax;
+    width: 30vmax;
+    height: 2vmax;
+    align-items: center;
+}
+
+#loginForm button {
+    margin-top: .8vmax;
+    width: 15vmax;
+    height: 2vmax;
+    align-items: center;
+    background-color: coral;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    border: 0.2px black solid ;
+    border-radius: 2vmax;
+    margin: 1.5vmax;
+    padding: 1.2vmax;
+    background-color: aqua;
+}
+
+a:hover {
+    padding: 1.3vmax
+}

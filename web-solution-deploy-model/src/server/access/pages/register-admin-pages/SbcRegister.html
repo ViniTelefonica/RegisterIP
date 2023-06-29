@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar SBC</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icon.ico">
+    <link rel="stylesheet" href="../../styles/cadastrarIP.css">
+</head>
+<body>
+    <h1>Cadastrar novo SBC</h1>
+    <p>Para cadastrar um novo SBC, preencha todos os campos abaixo. Se alguma informação não aparecer, tente recarregar a página.</p>
+    <form id="cadastrarSbcForm" autocomplete="off">
+        <label for="inputSbc">Nome do SBC:</label>
+        <input type="text" name="inputSbc" id="inputSbc" required>
+        <label for="inputCanaisCap">Capacidade de Canais:</label>
+        <input type="number" name="inputCanaisCap" id="inputCanaisCap">
+        <label for="inputCapsCap">Capacidade de Caps:</label>
+        <input type="number" name="inputCapsCap" id="inputCapsCap">
+        <button type="submit">Cadastrar SBC</button>
+    </form>
+</body>
+<script src="../register-admin-scripts/sbcRegister.js"></script>
+</html>

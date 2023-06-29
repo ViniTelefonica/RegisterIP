@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Range IP</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icon.ico">
+    <link rel="stylesheet" href="../../styles/cadastrarIP.css">
+</head>
+<body>
+    <h1>Cadastrar novo Range</h1>
+    <p>Para cadastrar um novo Range, preencha todos os campos abaixo. Se alguma informação não aparecer, tente recarregar a página.</p>
+    <form id="cadastrarSbcForm" autocomplete="off">
+        <label for="inputSbc">Nome do SBC:</label>
+        <select name="inputSbc" id="inputSbc" required></select>
+        <label for="inputCanaisCap">Capacidade de Canais:</label>
+        <select name="inputCanaisCap" id="inputCanaisCap"></select>
+        <label for="inputCapsCap">Capacidade de Caps:</label>
+        <select name="inputCapsCap" id="inputCapsCap"></select>
+        <label for="inputRange">Range IP (formato: 10.x.x.x/xx): </label>
+        <input type="text" name="inputRange" id="inputRange" required>
+        <label for="inputVlan">Vlan:</label>
+        <input type="text" name="inputVlan" id="inputVlan" required>
+        <label for="inputVrf">VRF:</label>
+        <input type="text" name="inputVrf" id="inputVrf" required>
+        <label>PROTOCOLO</label>
+        <div id="sipRtp" style="display: flex; flex-direction: row; align-self: flex-start; margin-left: 2.5vmax;">
+            <label for="sip" style="width: 10vmax; width: fit-content;">sip:</label>
+            <input type="checkbox" id="sip" name="sip" value="SIP" style="width: 1.5vmax;">
+            <label for="rtp" style="width: 10vmax; width: fit-content;">rtp:</label>
+            <input type="checkbox" name="rtp" id="rtp" value="RTP"style="width: 1.5vmax;">
+        </div>
+        <button type="submit">Cadastrar Range</button>
+    </form>
+</body>
+<script src="../register-admin-scripts/sbcGetter.js"></script>
+<script src="../register-admin-scripts/rangeRegister.js"></script>
+<script src="../register-admin-scripts/channelCapsGetter.js"></script>
+</html>
